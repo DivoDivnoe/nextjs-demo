@@ -1,0 +1,38 @@
+.footer {
+  display: grid;
+
+  padding: 25px 30px;
+
+  color: var(--white);
+  background-color: var(--primary);
+
+  font-size: 16px;
+  line-height: 22px;
+  grid-template-columns: 1fr auto auto;
+  gap: 40px;
+}
+
+.copyright {
+  grid-area: 'copyright';
+}
+
+.agreement {
+  grid-area: 'agreement';
+}
+
+.policy {
+  grid-area: 'policy';
+}
+
+.footer a:hover {
+  color: var(--gray-light);
+}
+
+@media (max-width: 765px) {
+  .footer {
+    gap: 10px 0;
+    grid-template-columns: minmax(320px, 1fr);
+
+    /* text-align: center; */
+  }
+}

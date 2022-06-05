@@ -1,16 +1,46 @@
 html,
 body {
-  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  padding: 0;
+
+  color: var(--black);
+
+  background: var(--background);
+
+  font-family: var(--font-family);
 }
 
 a {
-  color: inherit;
   text-decoration: none;
+
+  color: inherit;
 }
 
 * {
   box-sizing: border-box;
+}
+
+.visuallyHidden {
+  position: absolute;
+
+  overflow: hidden;
+
+  width: 0;
+  height: 0;
+}
+
+:root {
+  --background: #e5e5e5;
+  --gray-light: #ebebeb;
+  --gray-dark: #62666c;
+  --gray: #a4a4a4;
+  --black: #3b434e;
+  --white: #ffffff;
+  --primary: #694adf;
+  --primary-hover: #6344df;
+  --red: #fc836d;
+  --red-light: #fea291;
+  --green: #007b48;
+  --green-light: #c8f8e4;
+  --font-family: 'Noto Sans', sans-serif;
 }

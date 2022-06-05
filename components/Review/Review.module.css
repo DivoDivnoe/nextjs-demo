@@ -1,0 +1,53 @@
+.review {
+  display: grid;
+  grid-template-columns: 30px 1fr auto auto;
+  grid-template-areas: 'icon name date rating' 'description description description description';
+
+  align-items: center;
+  gap: 10px;
+
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.userIcon {
+  grid-area: icon;
+}
+
+.title {
+  grid-area: name;
+}
+
+.name {
+  margin-right: 10px;
+
+  font-weight: 700;
+}
+
+.date {
+  grid-area: date;
+
+  margin-right: 10px;
+}
+
+.rating {
+  grid-area: rating;
+}
+
+.description {
+  grid-area: description;
+}
+
+@media screen and (max-width: 640px) {
+  .review {
+    grid-template-columns: 30px auto 1fr;
+    grid-template-areas: 'icon name name' 'date date rating' 'description description description';
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .review {
+    grid-template-columns: 30px 1fr;
+    grid-template-areas: 'icon name' 'date date' 'rating rating' 'description description';
+  }
+}

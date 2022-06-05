@@ -1,0 +1,16 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-order-config-standard"],
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "color-hex-case": "lower",
+    "selector-class-pattern": "^.*$",
+    "string-quotes": "single",
+    "color-hex-length": "long",
+    "declaration-block-no-redundant-longhand-properties": [
+      true,
+      {
+        "ignoreShorthands": ["/grid/"]
+      }
+    ]
+  }
+}
