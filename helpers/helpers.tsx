@@ -12,7 +12,7 @@ export const firstLevelMenu: FirstLevelMenuItem[] = [
   { route: 'products', name: 'Товары', icon: <ProductsIcon />, id: TopLevelCategory.Products }
 ];
 
-export const priceRu = (priceRu: number): string => priceRu.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' ₽';
+export const priceRu = (price: number = 0): string => price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' ₽';
 
 export const declOfNum = (number: number, titles: [string, string, string]): string => {
   const cases = [2, 0, 1, 1, 1, 2];

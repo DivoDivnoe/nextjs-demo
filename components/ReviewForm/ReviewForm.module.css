@@ -26,6 +26,7 @@
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 20px;
+
   line-height: 19px;
 }
 

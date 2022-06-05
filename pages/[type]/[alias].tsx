@@ -9,15 +9,20 @@ import { firstLevelMenu } from '../../helpers/helpers';
 import { TopPageComponent } from '../../page-components';
 import { API } from '../../helpers/api';
 import Head from 'next/head';
+import { Error404 } from '../404';
 
 function TopPage({ page, products, firstCategory }: TopPageProps): JSX.Element {
+  if (!products || !page) {
+    return <Error404 />;
+  }
+
   return (
     <>
       <Head>
-        <title>{page.metaTitle}</title>
-        <meta name="description" content={page.metaDescription}></meta>
-        <meta property="og:title" content={page.metaTitle}></meta>
-        <meta property="og:description" content={page.metaDescription}></meta>
+        <title>{page && page.metaTitle}</title>
+        <meta name="description" content={page && page.metaDescription}></meta>
+        <meta property="og:title" content={page && page.metaTitle}></meta>
+        <meta property="og:description" content={page && page.metaDescription}></meta>
         <meta property="og:type" content="article" />
       </Head>
       <TopPageComponent page={page} products={products} firstCategory={firstCategory} />

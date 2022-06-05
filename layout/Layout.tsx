@@ -25,7 +25,7 @@ const Layout = ({ children }: LayoutProps) => {
         className={classnames(styles.skipLink, {
           [styles.displayed]: isSkipLinkDisplayed
         })}
-        tabIndex={1}
+        tabIndex={0}
         onFocus={() => setIsSkipLinkDisplayed(true)}
         onBlur={() => setIsSkipLinkDisplayed(false)}
         onKeyDown={onClickSkipLink}
